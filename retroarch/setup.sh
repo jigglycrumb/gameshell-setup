@@ -3,12 +3,6 @@
 GREEN='\033[1;32m'
 NC='\033[0m'
 
-printf "${GREEN}Creating directories...${NC}\n"
-mkdir -p ~/retroarch/games
-mkdir -p ~/retroarch/saves
-mkdir -p ~/retroarch/states
-mkdir -p ~/retroarch/system
-
 printf "${GREEN}Installing Retroarch dependencies...${NC}\n"
 sudo apt-get install git build-essential
 sudo apt-get build-dep retroarch
