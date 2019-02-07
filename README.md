@@ -1,4 +1,4 @@
-# Gameshell
+# gameshell-setup
 
 This repo contains an installer script to enhance a freshly installed Gameshell.
 
