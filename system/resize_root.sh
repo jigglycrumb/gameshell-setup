@@ -19,4 +19,4 @@ printf "${GREEN}Resizing file system...${NC}\n"
 # Resize file system
 sudo resize2fs /dev/mmcblk0p2
 
-printf "${GREEN}All done! Check Settings->Storage in the launcher 😊 ${NC}\n"
+printf "\n${GREEN}Done! Reload UI and Check Settings->Storage 😊 ${NC}\n\n"
