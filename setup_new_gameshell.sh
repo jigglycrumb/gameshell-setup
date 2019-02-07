@@ -13,7 +13,6 @@ read MENU_CHOICE
 if [ "${MENU_CHOICE}" == "y" ]
 then
     ./system/resize_root.sh
-    # echo "Doing stuff"
 else
     echo "Skipped"
 fi
@@ -29,7 +28,6 @@ read MENU_CHOICE
 if [ "${MENU_CHOICE}" == "y" ]
 then
     ./retroarch/setup.sh
-    # echo "Doing stuff"
 else
     echo "Skipped"
 fi
