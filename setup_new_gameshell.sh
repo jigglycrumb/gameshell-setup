@@ -124,4 +124,6 @@ sudo apt autoremove
 
 printf "${GREEN}**********************************************${NC}\n"
 printf "${GREEN}* Finished!                                  *${NC}\n"
+printf "${GREEN}* Please reload the launcher                 *${NC}\n"
+printf "${GREEN}* ...and have fun with your Gameshell!       *${NC}\n"
 printf "${GREEN}**********************************************${NC}\n\n"
