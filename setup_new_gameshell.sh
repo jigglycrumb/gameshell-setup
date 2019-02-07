@@ -47,7 +47,7 @@ read MENU_CHOICE
 if [ "${MENU_CHOICE}" == "y" ]
 then
     mkdir ~/screenshots
-    sudo apt-get install -y imagemagick
+    sudo apt-get -y install imagemagick
     echo "" >> ~/.bash_aliases
     echo "# alias for taking screenshots" >> ~/.bash_aliases
     echo "export DISPLAY=:0" >> ~/.bash_aliases
