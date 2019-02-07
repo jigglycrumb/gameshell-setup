@@ -3,7 +3,12 @@
 GREEN='\033[1;32m'
 NC='\033[0m'
 
-printf "${GREEN}Greetings!${NC}\n\n"
+printf "${GREEN}**********************************************${NC}\n"
+printf "${GREEN}* Welcome!                                   *${NC}\n"
+printf "${GREEN}* This installer will ask you some questions *${NC}\n"
+printf "${GREEN}* Type 'y' to accept                         *${NC}\n"
+printf "${GREEN}* or hit any other key to skip               *${NC}\n"
+printf "${GREEN}**********************************************${NC}\n\n"
 
 MENU_CHOICE="0"
 
@@ -29,6 +34,7 @@ if [ "${MENU_CHOICE}" == "y" ]
 then
     # wget -O ~/.bash_aliases https://raw.githubusercontent.com/hpcodecraft/Gameshell/master/system/.bash_aliases
     wget -O ~/.bash_aliases https://raw.githubusercontent.com/hpcodecraft/Gameshell/803122eb27ce9ffa8f89bd25f5b45e92943cf15a/system/.bash_aliases
+    source ~/.bash_aliases
 else
     echo "Skipped"
 fi
@@ -41,14 +47,15 @@ read MENU_CHOICE
 if [ "${MENU_CHOICE}" == "y" ]
 then
     mkdir ~/screenshots
-    sudo apt-get install imagemagick
+    sudo apt-get install -y imagemagick
     echo "" >> ~/.bash_aliases
     echo "# alias for taking screenshots" >> ~/.bash_aliases
     echo "export DISPLAY=:0" >> ~/.bash_aliases
     echo 'alias take_screenshot="xwd -root | convert xwd:-"' >> ~/.bash_aliases
     echo "" >> ~/.bash_aliases
-    echo "Done! You can now take screenshots via SSH by running 'take_screenshot <filename>'"
-    echo "e.g. 'take_screenshot ~/screenshots/screenshot.png'"
+    source ~/.bash_aliases
+    printf "\n${GREEN}Done! You can now take screenshots via SSH by running 'take_screenshot <filename>'${NC}\n"
+    printf "${GREEN}e.g. 'take_screenshot ~/screenshots/screenshot.png'${NC}\n\n"
 else
     echo "Skipped"
 fi
@@ -110,3 +117,7 @@ then
 else
     echo "Skipped"
 fi
+
+printf "${GREEN}**********************************************${NC}\n"
+printf "${GREEN}* Finished!                                  *${NC}\n"
+printf "${GREEN}**********************************************${NC}\n\n"
