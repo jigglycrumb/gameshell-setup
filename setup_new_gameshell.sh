@@ -118,6 +118,10 @@ else
     echo "Skipped"
 fi
 
+
+printf "\n${GREEN}Cleaning up... ${NC}\n"
+sudo apt autoremove
+
 printf "${GREEN}**********************************************${NC}\n"
 printf "${GREEN}* Finished!                                  *${NC}\n"
 printf "${GREEN}**********************************************${NC}\n\n"
