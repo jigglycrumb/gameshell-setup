@@ -34,7 +34,7 @@ read MENU_CHOICE
 
 if [ "${MENU_CHOICE}" == "y" ]
 then
-    wget -O ~/.bash_aliases https://raw.githubusercontent.com/hpcodecraft/Gameshell/master/system/.bash_aliases
+    wget -O ~/.bash_aliases https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/system/.bash_aliases
 else
     echo "Skipped"
 fi

@@ -32,6 +32,6 @@ All these steps are optional and have to be confirmed, so re-running the script 
 ## Usage
 
 1.  SSH into your Gameshell
-2.  Run `bash <(curl -s https://raw.githubusercontent.com/hpcodecraft/Gameshell/master/run.sh)`
+2.  Run `bash <(curl -s https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/run.sh)`
 
 After finishing, either use a new SSH session or run `source ~/.bash_aliases` to load the new aliases.
