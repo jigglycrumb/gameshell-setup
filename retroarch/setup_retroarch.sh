@@ -34,4 +34,4 @@ printf "${GREEN}Cleaning up...${NC}\n"
 cd
 rm -rf tmp
 
-printf "\n${GREEN}All done :) Retroarch is ready to use!${NC}\n\n"
+printf "\n${GREEN}Done! Retroarch is ready to use!${NC}\n\n"

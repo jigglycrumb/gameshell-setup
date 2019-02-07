@@ -3,6 +3,8 @@
 GREEN='\033[1;32m'
 NC='\033[0m'
 
+HERE=`pwd`
+
 printf "${GREEN}**********************************************${NC}\n"
 printf "${GREEN}* Welcome!                                   *${NC}\n"
 printf "${GREEN}* This installer will ask you some questions *${NC}\n"
@@ -65,14 +67,13 @@ read MENU_CHOICE
 
 if [ "${MENU_CHOICE}" == "y" ]
 then
-    ./retroarch/setup.sh
+    ./retroarch/setup_retroarch.sh
 else
     echo "Skipped"
 fi
 
 MENU_CHOICE="0"
 CLONED_INSTALLERS=0
-HERE=`pwd`
 INSTALLER_DIR="~/mods/gameshell-installers"
 
 printf "${GREEN}Install Prince of Persia? (y/N): ${NC}"
@@ -89,8 +90,6 @@ then
     CLONED_INSTALLERS=1
 
     ./install-prince
-
-    cd $HERE
 else
     echo "Skipped"
 fi
@@ -112,17 +111,17 @@ then
     fi
 
     ./install-rick
-    
-    cd $HERE
 else
     echo "Skipped"
 fi
 
 
 printf "\n${GREEN}Cleaning up... ${NC}\n"
-sudo apt autoremove
+sudo apt -y autoremove
 
-printf "${GREEN}**********************************************${NC}\n"
+cd $HERE
+
+printf "\n${GREEN}**********************************************${NC}\n"
 printf "${GREEN}* Finished!                                  *${NC}\n"
 printf "${GREEN}* Please reload the launcher                 *${NC}\n"
 printf "${GREEN}* ...and have fun with your Gameshell!       *${NC}\n"
