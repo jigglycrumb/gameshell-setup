@@ -3,6 +3,6 @@
 cd
 mkdir mods
 cd mods
-git clone https://github.com/hpcodecraft/Gameshell.git gameshell-setup
+git clone https://github.com/hpcodecraft/gameshell-setup.git
 cd gameshell-setup
 ./setup_new_gameshell.sh

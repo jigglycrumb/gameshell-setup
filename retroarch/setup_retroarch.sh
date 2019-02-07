@@ -28,7 +28,7 @@ cp *.filt *.so ~/.config/retroarch/filters/video
 printf "${GREEN}Updating retroarch.cfg...${NC}\n"
 cd ~/.config/retroarch
 cp retroarch.cfg retroarch.cfg.before-setup
-curl -o retroarch.cfg https://raw.githubusercontent.com/hpcodecraft/Gameshell/master/retroarch/retroarch.cfg
+curl -o retroarch.cfg https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/retroarch/retroarch.cfg
 
 printf "${GREEN}Cleaning up...${NC}\n"
 cd
