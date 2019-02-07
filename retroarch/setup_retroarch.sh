@@ -4,8 +4,8 @@ GREEN='\033[1;32m'
 NC='\033[0m'
 
 printf "${GREEN}Installing Retroarch dependencies...${NC}\n"
-sudo apt-get install git build-essential
-sudo apt-get build-dep retroarch
+sudo apt-get -y install git build-essential
+sudo apt-get -y build-dep retroarch
 
 # create a temporary folder for this
 cd
@@ -34,4 +34,4 @@ printf "${GREEN}Cleaning up...${NC}\n"
 cd
 rm -rf tmp
 
-printf "\n${GREEN}All done :) Retroarch is ready to use!${NC}\n\n"
+printf "\n${GREEN}Done! Retroarch is ready to use!${NC}\n\n"
