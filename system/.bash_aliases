@@ -1,0 +1,7 @@
+# some aliases for common commands
+# in clockwork OS 3.0 this file is automatically sourced if it exists
+# feel free to add your own :)
+
+alias l="ls -l"
+alias ll="ls -la"
+alias c="clear"
