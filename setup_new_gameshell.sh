@@ -77,7 +77,7 @@ then
     echo "" >> $OUT_FILE
     echo "source ${HOME}/.gitprompt" >> $OUT_FILE
     echo "" >> $OUT_FILE
-    printf "\n${GREEN}Done! The current git branch will now be displayed in the prompt'${NC}\n\n"
+    printf "\n${GREEN}Done! The current git branch will now be displayed in the prompt${NC}\n\n"
 else
     echo "Skipped"
 fi
