@@ -34,7 +34,7 @@ read MENU_CHOICE
 
 if [ "${MENU_CHOICE}" == "y" ]
 then
-    wget -O ~/.bash_aliases https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/system/.bash_aliases
+    wget -O ${HOME}/.bash_aliases https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/system/.bash_aliases
 else
     echo "Skipped"
 fi
@@ -46,13 +46,14 @@ read MENU_CHOICE
 
 if [ "${MENU_CHOICE}" == "y" ]
 then
-    mkdir ~/screenshots
+    OUT_FILE="${HOME}/.bash_aliases"
+    mkdir ${HOME}/screenshots
     sudo apt-get -y install imagemagick
-    echo "" >> ~/.bash_aliases
-    echo "# alias for taking screenshots" >> ~/.bash_aliases
-    echo "export DISPLAY=:0" >> ~/.bash_aliases
-    echo 'alias take_screenshot="xwd -root | convert xwd:-"' >> ~/.bash_aliases
-    echo "" >> ~/.bash_aliases
+    echo "" >> $OUT_FILE
+    echo "# alias for taking screenshots" >> $OUT_FILE
+    echo "export DISPLAY=:0" >> $OUT_FILE
+    echo 'alias take_screenshot="xwd -root | convert xwd:-"' >> $OUT_FILE
+    echo "" >> $OUT_FILE
     printf "\n${GREEN}Done! You can now take screenshots via SSH by running 'take_screenshot <filename>'${NC}\n"
     printf "${GREEN}e.g. 'take_screenshot ~/screenshots/screenshot.png'${NC}\n\n"
 else
@@ -71,17 +72,17 @@ fi
 
 MENU_CHOICE="0"
 CLONED_INSTALLERS=0
-INSTALLER_DIR="~/mods/gameshell-installers"
+INSTALLER_DIR="${HOME}/mods/gameshell-installers"
 
 printf "${GREEN}Install Prince of Persia? (y/N): ${NC}"
 read MENU_CHOICE
 
 if [ "${MENU_CHOICE}" == "y" ]
 then
-    mkdir -p $INSTALLER_DIR
-    git clone https://github.com/sbielmann/gameshell-installers.git $INSTALLER_DIR
+    mkdir -p ${INSTALLER_DIR}
+    git clone https://github.com/sbielmann/gameshell-installers.git ${INSTALLER_DIR}
     
-    cd $INSTALLER_DIR
+    cd ${INSTALLER_DIR}
     chmod a+x install-*
 
     CLONED_INSTALLERS=1
@@ -98,13 +99,13 @@ if [ "${MENU_CHOICE}" == "y" ]
 then
     if [ $CLONED_INSTALLERS == 0 ]
     then
-        mkdir -p $INSTALLER_DIR
-        git clone https://github.com/sbielmann/gameshell-installers.git $INSTALLER_DIR
+        mkdir -p ${INSTALLER_DIR}
+        git clone https://github.com/sbielmann/gameshell-installers.git ${INSTALLER_DIR}
     
-        cd $INSTALLER_DIR
+        cd ${INSTALLER_DIR}
         chmod a+x install-*
     else
-        cd $INSTALLER_DIR
+        cd ${INSTALLER_DIR}
     fi
 
     ./install-rick
@@ -116,7 +117,7 @@ fi
 printf "\n${GREEN}Cleaning up... ${NC}\n"
 sudo apt -y autoremove
 
-cd $HERE
+cd ${HERE}
 
 printf "\n${GREEN}**********************************************${NC}\n"
 printf "${GREEN}* Finished!                                  *${NC}\n"
