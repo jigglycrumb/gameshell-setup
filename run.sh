@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd
+cd $HOME
 mkdir mods
 cd mods
 git clone https://github.com/hpcodecraft/gameshell-setup.git
