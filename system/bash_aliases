@@ -1,5 +1,5 @@
 # some aliases for common commands
-# in clockwork OS 3.0 this file is automatically sourced if it exists
+# in clockwork OS 0.3 this file is automatically sourced if it exists
 # feel free to add your own :)
 
 alias l="ls -l"

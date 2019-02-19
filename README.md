@@ -6,6 +6,7 @@ The installer can:
 - Resize the root filesystem to fill the entire SD card
 - Install some common bash aliases
 - Install tools and an alias for taking screenshots via SSH
+- Extend the bash prompt so it shows the current git branch
 - Update retroarch to the latest version and configure it
 - Install Prince of Persia and Rick Dangerous using the installers of @sbielmann
 

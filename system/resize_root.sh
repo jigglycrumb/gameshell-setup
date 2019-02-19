@@ -19,4 +19,9 @@ printf "${GREEN}Resizing file system...${NC}\n"
 # Resize file system
 sudo resize2fs /dev/mmcblk0p2
 
+printf "${GREEN}Cleaning up...${NC}\n"
+
+# Uninstall growpart package again
+sudo apt-get -y remove cloud-guest-utils
+
 printf "\n${GREEN}Done! Reload UI and Check Settings->Storage 😊 ${NC}\n\n"
