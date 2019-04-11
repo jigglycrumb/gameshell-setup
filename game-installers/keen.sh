@@ -5,7 +5,7 @@ NC='\033[0m'
 HERE=$(pwd)
 
 INSTALL_PATH="/home/cpi/games/CommanderGenius"
-MENU_ITEM_PATH="~/apps/Menu/CommanderGenius"
+MENU_ITEM_PATH="/home/cpi/apps/Menu/CommanderGenius"
 
 # install game
 
@@ -21,16 +21,16 @@ cd ~
 rm -rf tmp
 
 # ???
-ln -s ${INSTALL_PATH} /home/cpi/.CommanderGenius/games
+ln -s "${INSTALL_PATH}" /home/cpi/.CommanderGenius/games
 
 # install menu item
 printf "${GREEN}Install menu item for Commander Keen? (y/N): ${NC}"
 read USER_INPUT
 
 if [ "${USER_INPUT}" == "y" ]; then
-  mkdir -p ${MENU_ITEM_PATH}
+  mkdir -p "${MENU_ITEM_PATH}"
   echo "${INSTALL_PATH}/CommanderGenius" >"${MENU_ITEM_PATH}/CommanderGenius.sh"
-  wget https://gitlab.com/Oet/Commander-Genius/uploads/4fef7d77bce50d5d141ff6a622ad8c52/CommanderGenius.png -P /home/cpi/apps/Menu/CommanderGenius
+  wget https://gitlab.com/Oet/Commander-Genius/uploads/4fef7d77bce50d5d141ff6a622ad8c52/CommanderGenius.png -P "${MENU_ITEM_PATH}"
   chmod 755 "${MENU_ITEM_PATH}/CommanderGenius.sh"
 else
   echo "Skipped"
