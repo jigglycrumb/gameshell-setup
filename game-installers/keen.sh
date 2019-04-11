@@ -29,8 +29,9 @@ read USER_INPUT
 
 if [ "${USER_INPUT}" == "y" ]; then
   mkdir -p ${MENU_ITEM_PATH}
-  echo "${INSTALL_PATH}/CommanderGenius" >${MENU_ITEM_PATH}/CommanderGenius.sh
+  echo "${INSTALL_PATH}/CommanderGenius" >"${MENU_ITEM_PATH}/CommanderGenius.sh"
   wget https://gitlab.com/Oet/Commander-Genius/uploads/4fef7d77bce50d5d141ff6a622ad8c52/CommanderGenius.png -P /home/cpi/apps/Menu/CommanderGenius
+  chmod 755 "${MENU_ITEM_PATH}/CommanderGenius.sh"
 else
   echo "Skipped"
 fi

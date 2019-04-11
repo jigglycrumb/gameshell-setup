@@ -29,6 +29,7 @@ if [ "${USER_INPUT}" == "y" ]; then
   cd "${MENU_ITEM_PATH}"
   echo "cd ${INSTALL_PATH}" >"Duke Nukem 3D.sh"
   echo "./eduke32" >>"Duke Nukem 3D.sh"
+  chmod 755 "Duke Nukem 3D.sh"
 else
   echo "Skipped"
 fi
