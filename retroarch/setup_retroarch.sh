@@ -3,7 +3,7 @@
 GREEN='\033[1;32m'
 NC='\033[0m'
 
-HERE=`pwd`
+HERE=$(pwd)
 
 printf "${GREEN}Installing Retroarch dependencies...${NC}\n"
 sudo apt-get -y install git build-essential
@@ -37,6 +37,6 @@ printf "${GREEN}Cleaning up...${NC}\n"
 cd ${HOME}
 rm -rf tmp
 
-cd ${HERE}
+cd "${HERE}"
 
 printf "\n${GREEN}Done! Retroarch is ready to use!${NC}\n\n"
