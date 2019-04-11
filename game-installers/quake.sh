@@ -29,7 +29,7 @@ else
 fi
 
 # give instructions on how to finish installation
-cd ${HERE}
+cd "${HERE}"
 printf "${GREEN}Installation finished.\nPlease copy your original pak0.pak and pak1.pak to ${INSTALL_PATH}${NC}\n\n"
 
 # Copy the pak0.pak and pak1.pak files, from your CD, to /home/cpi/games/QUAKE/Quake1/id1

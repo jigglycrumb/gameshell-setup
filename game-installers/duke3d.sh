@@ -18,7 +18,7 @@ cd svn.eduke32.com/eduke32/
 make
 mkdir -p "${INSTALL_PATH}"
 cp eduke32 "${INSTALL_PATH}"
-# rm -rf ~/tmp
+rm -rf ~/tmp
 
 # install menu item
 printf "${GREEN}Install menu item for Duke 3D? (y/N): ${NC}"
@@ -35,5 +35,5 @@ else
 fi
 
 # give instructions on how to finish installation
-cd ${HERE}
+cd "${HERE}"
 printf "${GREEN}Installation finished.\nPlease copy DUKE3D.GRP from your original version to ${INSTALL_PATH}${NC}\n\n"

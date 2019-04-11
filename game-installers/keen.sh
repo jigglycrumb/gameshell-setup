@@ -37,5 +37,5 @@ else
 fi
 
 # give instructions on how to finish installation
-cd ${HERE}
+cd "${HERE}"
 printf "${GREEN}Installation finished.\nPlease copy your original game files to ${INSTALL_PATH}${NC}\n\n"
