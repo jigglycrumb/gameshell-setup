@@ -10,13 +10,15 @@ MENU_ITEM_PATH="~/apps/Menu/CommanderGenius"
 # install game
 
 # CommanderGenius 2.3.0
-cd ~~
+cd ~
 mkdir tmp
 cd tmp
 wget https://gitlab.com/Oet/Commander-Genius/uploads/79c009d983eaacccc8e475c80cade422/CommanderGenius.zip
 unzip CommanderGenius.zip
 mv CommanderGenius/ /home/cpi/games/
 mv .CommanderGenius/ /home/cpi/
+cd ~
+rm -rf tmp
 
 # ???
 ln -s ${INSTALL_PATH} /home/cpi/.CommanderGenius/games
@@ -32,3 +34,7 @@ if [ "${USER_INPUT}" == "y" ]; then
 else
   echo "Skipped"
 fi
+
+# give instructions on how to finish installation
+cd ${HERE}
+printf "${GREEN}Installation finished.\nPlease copy your original game files to ${INSTALL_DIR} ${NC}"
