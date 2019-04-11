@@ -2,6 +2,7 @@
 
 GREEN='\033[1;32m'
 NC='\033[0m'
+HERE=$(pwd)
 
 INSTALL_PATH="~/games/Duke3D"
 MENU_ITEM_PATH="~/apps/Menu/Duke Nukem 3D"
@@ -19,6 +20,7 @@ mkdir ${INSTALL_PATH}
 cp eduke32 ${INSTALL_PATH}
 rm -rf ~/tmp
 
+# install menu item
 printf "${GREEN}Install menu item for Duke 3D? (y/N): ${NC}"
 read USER_INPUT
 
@@ -31,4 +33,6 @@ else
   echo "Skipped"
 fi
 
+# give instructions on how to finish installation
+cd ${HERE}
 printf "${GREEN}Installation finished.\nPlease copy DUKE3D.GRP from your original version to ${INSTALL_DIR} ${NC}"
