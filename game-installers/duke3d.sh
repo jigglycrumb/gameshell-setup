@@ -16,8 +16,8 @@ sudo apt install -y libflac-dev libsdl2-mixer-dev libvorbis-dev libvpx-dev
 wget -r --no-parent https://svn.eduke32.com/eduke32/
 cd svn.eduke32.com/eduke32/
 make
-mkdir ${INSTALL_PATH}
-cp eduke32 ${INSTALL_PATH}
+mkdir "${INSTALL_PATH}"
+cp eduke32 "${INSTALL_PATH}"
 rm -rf ~/tmp
 
 # install menu item
@@ -25,8 +25,8 @@ printf "${GREEN}Install menu item for Duke 3D? (y/N): ${NC}"
 read USER_INPUT
 
 if [ "${USER_INPUT}" == "y" ]; then
-  mkdir -p ${MENU_ITEM_PATH}
-  cd ${MENU_ITEM_PATH}
+  mkdir -p "${MENU_ITEM_PATH}"
+  cd "${MENU_ITEM_PATH}"
   echo "cd ${INSTALL_PATH}" >"Duke Nukem 3D.sh"
   echo "./eduke32" >>"Duke Nukem 3D.sh"
 else
