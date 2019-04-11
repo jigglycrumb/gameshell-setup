@@ -24,7 +24,7 @@ rm -rf tmp
 ln -s ${INSTALL_PATH} /home/cpi/.CommanderGenius/games
 
 # install menu item
-printf "${GREEN}Install menu item for Duke 3D? (y/N): ${NC}"
+printf "${GREEN}Install menu item for Commander Keen? (y/N): ${NC}"
 read USER_INPUT
 
 if [ "${USER_INPUT}" == "y" ]; then
@@ -37,4 +37,4 @@ fi
 
 # give instructions on how to finish installation
 cd ${HERE}
-printf "${GREEN}Installation finished.\nPlease copy your original game files to ${INSTALL_DIR} ${NC}"
+printf "${GREEN}Installation finished.\nPlease copy your original game files to ${INSTALL_PATH}${NC}\n\n"

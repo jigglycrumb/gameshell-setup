@@ -35,4 +35,4 @@ fi
 
 # give instructions on how to finish installation
 cd ${HERE}
-printf "${GREEN}Installation finished.\nPlease copy DUKE3D.GRP from your original version to ${INSTALL_DIR} ${NC}"
+printf "${GREEN}Installation finished.\nPlease copy DUKE3D.GRP from your original version to ${INSTALL_PATH}${NC}\n\n"
