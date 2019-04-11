@@ -4,8 +4,8 @@ GREEN='\033[1;32m'
 NC='\033[0m'
 HERE=$(pwd)
 
-INSTALL_PATH="~/games/Duke3D"
-MENU_ITEM_PATH="~/apps/Menu/Duke Nukem 3D"
+INSTALL_PATH="/home/cpi/games/Duke3D"
+MENU_ITEM_PATH="/home/cpi/apps/Menu/Duke Nukem 3D"
 
 # install game
 cd
@@ -16,9 +16,9 @@ sudo apt install -y libflac-dev libsdl2-mixer-dev libvorbis-dev libvpx-dev
 wget -r --no-parent https://svn.eduke32.com/eduke32/
 cd svn.eduke32.com/eduke32/
 make
-mkdir "${INSTALL_PATH}"
+mkdir -p "${INSTALL_PATH}"
 cp eduke32 "${INSTALL_PATH}"
-rm -rf ~/tmp
+# rm -rf ~/tmp
 
 # install menu item
 printf "${GREEN}Install menu item for Duke 3D? (y/N): ${NC}"
