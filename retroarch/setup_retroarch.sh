@@ -28,10 +28,10 @@ make
 mkdir -p ${HOME}/.config/retroarch/filters/video
 cp *.filt *.so ${HOME}/.config/retroarch/filters/video
 
-printf "${GREEN}Updating retroarch.cfg...${NC}\n"
-cd ${HOME}/.config/retroarch
-cp retroarch.cfg retroarch.cfg.before-setup
-curl -o retroarch.cfg https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/retroarch/retroarch.cfg
+# printf "${GREEN}Updating retroarch.cfg...${NC}\n"
+# cd ${HOME}/.config/retroarch
+# cp retroarch.cfg retroarch.cfg.before-setup
+# curl -o retroarch.cfg https://raw.githubusercontent.com/hpcodecraft/gameshell-setup/master/retroarch/retroarch.cfg
 
 printf "${GREEN}Cleaning up...${NC}\n"
 cd ${HOME}
