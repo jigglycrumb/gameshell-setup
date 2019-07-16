@@ -1,8 +1,14 @@
 #!/bin/bash
 
-cd $HOME
-mkdir mods
+cd ${HOME}
+if [ ! -d mods ]; then
+  mkdir mods
+fi
+
 cd mods
-git clone https://github.com/hpcodecraft/gameshell-setup.git
+if [ ! -d gameshell-setup ]; then
+  git clone https://github.com/hpcodecraft/gameshell-setup.git
+fi
+
 cd gameshell-setup
 ./setup_new_gameshell.sh
