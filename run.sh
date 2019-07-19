@@ -11,4 +11,5 @@ if [ ! -d gameshell-setup ]; then
 fi
 
 cd gameshell-setup
+git pull
 ./setup_new_gameshell.sh
