@@ -6,6 +6,8 @@ NC='\033[0m'
 HERE=$(pwd)
 MENU_CHOICE="0"
 
+WAIT_TIME=10 # seconds
+
 printf "${GREEN}**********************************************${NC}\n"
 printf "${GREEN}*                                            *${NC}\n"
 printf "${GREEN}* Welcome!                                   *${NC}\n"
@@ -21,9 +23,15 @@ printf "${GREEN}*                                            *${NC}\n"
 printf "${GREEN}**********************************************${NC}\n\n"
 
 printf "${GREEN}Hint: The system updates may ask you to replace config files, use the default answer in that case${NC}\n"
-printf "${GREEN}If you are asked for restarting affected services, choose Yes${NC}\n"
+printf "${GREEN}If you are asked to restart affected services, choose Yes${NC}\n\n"
 
-sleep 10
+temp_cnt=${WAIT_TIME}
+while [[ ${temp_cnt} -gt 0 ]]; do
+    printf "\r${GREEN}Waiting for %2d second(s). Hit Ctrl+C to cancel.${NC}" ${temp_cnt}
+    sleep 1
+    ((temp_cnt--))
+done
+printf "\n\n"
 
 printf "${GREEN}Updating package lists...${NC}\n"
 sudo apt-get update
