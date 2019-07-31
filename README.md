@@ -11,7 +11,7 @@ The installer can:
 - Install tools and an alias for taking screenshots via SSH
 - Extend the bash prompt so it shows the current git branch
 - Update Launcher and LauncherGo to the latest version
-- Update retroarch to the latest version and configure it
+- Update retroarch to the latest version
 - Install Prince of Persia and Rick Dangerous using the installers of @sbielmann
 
 All these steps are optional and have to be confirmed, so re-running the script and choosing different options is possible
