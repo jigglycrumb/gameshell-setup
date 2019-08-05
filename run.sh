@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ${HOME}
+cd /home/cpi
 if [ ! -d mods ]; then
   mkdir mods
 fi
@@ -12,4 +12,4 @@ fi
 
 cd gameshell-setup
 git pull
-./setup_new_gameshell.sh
+./install.sh
