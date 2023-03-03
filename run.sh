@@ -7,7 +7,7 @@ fi
 
 cd mods
 if [ ! -d gameshell-setup ]; then
-  git clone https://github.com/hpcodecraft/gameshell-setup.git
+  git clone https://github.com/jigglycrumb/gameshell-setup.git
 fi
 
 cd gameshell-setup
